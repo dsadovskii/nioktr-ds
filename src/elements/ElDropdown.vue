@@ -36,7 +36,7 @@
         @search="handleSearch"
       >
         <div slot="suffixIcon" class="custom-select-arrow">
-          <el-svg-icon name="chevron_down" size="14" color="gray" />
+          <el-svg-icon v-if="!(mode === 'multiple' || searchable)" name="chevron_down" size="14" color="gray" />
         </div>
         <!--eslint-disable-next-line-->
         <a-select-option v-for="(item, i) in computedOptions" :key="new Date().getTime() + i" :value="getValue(item)">
@@ -435,7 +435,7 @@ export default {
     background: $bg-gray;
     &::after {
       content: '+';
-      font-size: 32px;
+      font-size: 24px;
       position: absolute;
       left: 50%;
       transform: translateX(-50%) rotate(45deg);

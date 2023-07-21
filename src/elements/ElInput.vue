@@ -324,7 +324,7 @@ export default {
     cursor: pointer;
     &::after {
       content: '+';
-      font-size: 32px;
+      font-size: 24px;
       position: absolute;
       left: 50%;
       transform: translateX(-50%) rotate(45deg);
