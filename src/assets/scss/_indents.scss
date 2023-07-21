@@ -1,0 +1,64 @@
+@import 'spaces';
+@import 'media';
+@import "indents-table";
+
+@each $line, $values in $indents-lines{
+  @each $key, $value in $values {
+    @media (min-width: map-get($medias, $key)) {
+      .indents-line-#{$line}-bottom {
+        margin-bottom: $value
+      }
+      .indents-line-#{$line}-top {
+        margin-top: $value
+      }
+    }
+  }
+}
+@each $size, $param in $spaces {
+  .mt-#{$size} {
+    margin-top: $param;
+  }
+  .mr-#{$size} {
+    margin-right: $param;
+  }
+  .mb-#{$size} {
+    margin-bottom: $param;
+  }
+  .ml-#{$size} {
+    margin-left: $param;
+  }
+  .m-#{$size} {
+    margin: $param;
+  }
+  .mx-#{$size} {
+    margin-left: $param;
+    margin-right: $param;
+  }
+  .my-#{$size} {
+    margin-top: $param;
+    margin-bottom: $param;
+  }
+  .pt-#{$size} {
+    padding-top: $param;
+  }
+  .pr-#{$size} {
+    padding-right: $param;
+  }
+  .pb-#{$size} {
+    padding-bottom: $param;
+  }
+  .pl-#{$size} {
+    padding-left: $param;
+  }
+  .p-#{$size} {
+    padding: $param;
+  }
+  .px-#{$size} {
+    padding-left: $param;
+    padding-right: $param;
+  }
+  .py-#{$size} {
+    padding-top: $param;
+    padding-bottom: $param;
+  }
+}

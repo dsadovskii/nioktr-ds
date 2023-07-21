@@ -1,0 +1,12 @@
+$indents-lines: (
+  //media         xs             s             m             l             xl
+  h1-text:      ( xs: $space-2,  s: $space-2,  m: $space-2,  l: $space-2,  xl: $space-2 ),  //2 2 2 2 2
+);
+
+@mixin indents-line ($to, $line, $type: margin) {
+  @each $key, $value in map-get($indents-lines, $line) {
+    @media (min-width: map-get($medias, $key)) {
+      #{$type}-#{$to}: $value !important;
+    }
+  }
+}

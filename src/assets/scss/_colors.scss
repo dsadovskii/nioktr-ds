@@ -1,0 +1,38 @@
+$color-orange: #FFA000;
+$color-green: #00CD60;
+$color-red: #F3344F;
+$color-light-red: rgba(238, 63, 88, 0.25);
+$color-blue: #015CA3;
+$color-light-blue: #015CA3;
+$color-lighter-blue: rgba(235, 238, 243, 0.5);
+$color-black: #000000;
+$color-gray: #A6AEBF;
+$color-gray-1: #717782;
+$color-gray-2: #A6AEBF;
+$color-gray-3: #D2D6DF;
+$color-gray-4: #EAEDEF;
+$color-gray-5: #F5F7F9;
+$color-white: #ffffff;
+$color-dark-gray: #343434;
+$color-steel-gray: #EBEEF3;
+$color-transparent: transparent;
+
+$colors: (
+  'orange': $color-orange,
+  'green': $color-green,
+  'red': $color-red,
+  'light-red': $color-light-red,
+  'blue': $color-blue,
+  'light-blue': $color-light-blue,
+  'black': $color-black,
+  'gray': $color-gray,
+  'gray-1': $color-gray-1,
+  'gray-2': $color-gray-2,
+  'gray-3': $color-gray-3,
+  'gray-4': $color-gray-4,
+  'gray-5': $color-gray-5,
+  'white': $color-white,
+  'dark-gray': $color-dark-gray,
+  'steel-gray': $color-steel-gray,
+  'transparent': transparent,
+);

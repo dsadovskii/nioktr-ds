@@ -1,0 +1,25 @@
+$mobile: "(hover: none) and (pointer: coarse)";
+$desktop: "(hover: hover) and (pointer: fine)";
+$media-xs: 320px;
+$media-s: 480px;
+$media-m: 768px;
+$media-l: 1024px;
+$media-xl: 1440px;
+$media-xxl: 1920px;
+$media-s-down: 479px;
+$media-m-down: 767px;
+$media-l-down: 1023px;
+$media-xl-down: 1439px;
+$media-s-up: 481px;
+$media-m-up: 769px;
+$media-l-up: 1025px;
+$media-xl-up: 1441px;
+
+$medias: (
+  'xs': $media-xs,
+  's': $media-s,
+  'm': $media-m,
+  'l': $media-l,
+  'xl': $media-xl,
+  'xxl': $media-xxl,
+);

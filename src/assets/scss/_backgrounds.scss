@@ -1,0 +1,31 @@
+$bg-gray: #A6AEBF;
+$bg-gray-1: #464646;
+$bg-gray-2: #A6AEBF;
+$bg-gray-3: #D2D6DF;
+$bg-gray-4: #EBEEF3;
+$bg-gray-5: #f5f7f9;
+$bg-white: #ffffff;
+$bg-dark-gray: #464646;
+$bg-steel-gray: #EBEEF3;
+$bg-green: #00CD60;
+$bg-red: #ED694B;
+$bg-light-blue: #0063B0;
+$bg-lighter-blue: rgba(235, 238, 243, 0.5);
+$bg-blue: #1F2E6A;
+
+$backgrounds: (
+  'gray': $bg-gray,
+  'gray-1': $bg-gray-1,
+  'gray-2': $bg-gray-2,
+  'gray-3': $bg-gray-3,
+  'gray-4': $bg-gray-4,
+  'gray-5': $bg-gray-5,
+  'white': $bg-white,
+  'steel-gray': $bg-steel-gray,
+  'dark-gray': $bg-dark-gray,
+  'green': $bg-green,
+  'red': $bg-red,
+  'light-blue': $bg-light-blue,
+  'lighter-blue': $bg-lighter-blue,
+  'blue': $bg-blue,
+);

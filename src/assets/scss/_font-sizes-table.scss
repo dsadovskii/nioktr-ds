@@ -1,0 +1,13 @@
+$font-sizes-lines: (
+  //media       xs            s           m           l           xl
+  result-head:( xs: $fs-12,   s: $fs-12,  m: $fs-12,  l: $fs-12,  xl: $fs-12 ), //12 12 12 12 12
+
+);
+
+@mixin font-sizes-line ($line) {
+  @each $key, $value in map-get($font-sizes-lines, $line) {
+    @media (min-width: map-get($medias, $key)) {
+      font-size: $value !important;
+    }
+  }
+}
