@@ -321,8 +321,7 @@ export default {
         height: calc(100% - 6px);
         max-height: 35px;
         right: 3px;
-        color: $color-white;
-        background: $color-light-blue;
+        color: $color-gray;
         border-radius: 3px;
         cursor: pointer;
         &:hover {
@@ -400,14 +399,10 @@ export default {
     }
   }
   &--error {
-    color: $color-red;
     .mx-input {
       border-color: #{$color-red} !important;
-      background-color: #{$color-red}20;
+      background-color: #{$color-red};
       color: inherit;
-    }
-    .mx-input::placeholder {
-      color: $color-red !important;
     }
     &-msg {
       color: $color-red;

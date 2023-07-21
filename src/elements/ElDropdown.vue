@@ -36,7 +36,7 @@
         @search="handleSearch"
       >
         <div slot="suffixIcon" class="custom-select-arrow">
-          <el-svg-icon name="chevron_down" size="14" :color="noArrowBg ? 'gray' : 'white'" />
+          <el-svg-icon name="chevron_down" size="14" color="gray" />
         </div>
         <!--eslint-disable-next-line-->
         <a-select-option v-for="(item, i) in computedOptions" :key="new Date().getTime() + i" :value="getValue(item)">
@@ -44,7 +44,7 @@
         </a-select-option>
       </a-select>
       <div v-if="mode === 'multiple' || searchable" class="searchable-icon">
-        <el-svg-icon name="search" size="12" color="white" />
+        <el-svg-icon name="search" size="12" color="gray" />
       </div>
       <small class="el-dropdown--error-msg">{{ errorMessage }}</small>
       <small v-if="hint && !errorMessage" class="el-dropdown--hint-msg">{{ hint }}</small>
@@ -420,7 +420,8 @@ export default {
     }
   }
   &__clear-button {
-    @include size(32px);
+    height: 32px;
+    width: auto !important;
     margin-right: 2px;
     box-shadow: none;
     background: none;
@@ -431,7 +432,7 @@ export default {
     position: relative;
     cursor: pointer;
     transform: translateX(-36px);
-    background: $bg-gray-5;
+    background: $bg-gray;
     &::after {
       content: '+';
       font-size: 32px;
@@ -439,6 +440,8 @@ export default {
       left: 50%;
       transform: translateX(-50%) rotate(45deg);
       transition: all 0.3s ease;
+      font-weight: normal;
+      color: $color-gray;
     }
     @media #{$mobile} {
       &:active {
@@ -535,7 +538,6 @@ export default {
     .ant-select-arrow {
       margin: 0 !important;
       width: 35px;
-      background-color: $bg-light-blue;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -571,7 +573,6 @@ export default {
     .ant-select-arrow {
       margin: 0 !important;
       width: $space-28;
-      background-color: $bg-light-blue;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -600,7 +601,6 @@ export default {
     top: 3px;
     right: 3px;
     width: 35px;
-    background-color: $bg-light-blue;
     display: flex;
     align-items: center;
     justify-content: center;

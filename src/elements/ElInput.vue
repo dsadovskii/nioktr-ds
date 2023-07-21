@@ -329,6 +329,7 @@ export default {
       left: 50%;
       transform: translateX(-50%) rotate(45deg);
       transition: all 0.3s ease;
+      color: $color-gray;
     }
     @media #{$mobile} {
       &:active {
