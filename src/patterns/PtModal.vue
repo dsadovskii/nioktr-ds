@@ -1,18 +1,18 @@
 <template>
   <modal
-    :class="classes"
-    :name="name"
-    :max-width="maxWidth"
-    :click-to-close="clickToClose"
-    class="pt-modal"
-    scrollable
-    adaptive
-    height="auto"
-    width="100%"
-    @before-open="handleBeforeOpen"
-    @before-close="handleBeforeClose"
-    @closed="handleClosed"
-    @opened="handleOpened"
+      :class="classes"
+      :name="name"
+      :max-width="maxWidth"
+      :click-to-close="clickToClose"
+      class="pt-modal"
+      scrollable
+      adaptive
+      height="auto"
+      width="100%"
+      @before-open="handleBeforeOpen"
+      @before-close="handleBeforeClose"
+      @closed="handleClosed"
+      @opened="handleOpened"
   >
     <div class="pt-modal__inner" :class="{ 'with-scroll': scrollable }">
       <div v-if="$slots.title" class="pt-modal__header">
@@ -147,7 +147,7 @@ export default {
   padding: 12px 0;
   .vm--modal {
     overflow: unset;
-    border-radius: $radius-16;
+    border-radius: $radius-24;
     height: auto !important;
   }
   &__btn-close {
@@ -282,7 +282,7 @@ export default {
     border-bottom: 1px solid $color-gray-3;
     background-color: $bg-white;
     z-index: 1;
-    border-radius: $radius-3 $radius-3 0 0;
+    border-radius: $radius-24 $radius-24 0 0;
   }
   &__title {
     margin-top: 0;
@@ -295,7 +295,7 @@ export default {
     flex-direction: column;
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
     background-color: $color-white;
-    border-radius: $radius-3;
+    border-radius: $radius-24;
   }
   &__control {
     position: sticky;
@@ -305,7 +305,7 @@ export default {
     background-color: $bg-white;
     border-top: 1px solid $color-gray-3;
     z-index: 5;
-    border-radius: 0 0 $radius-3 $radius-3;
+    border-radius: 0 0 $radius-24 $radius-24;
     &:empty {
       display: none;
     }

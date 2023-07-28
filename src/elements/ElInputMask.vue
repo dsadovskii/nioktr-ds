@@ -208,7 +208,7 @@ export default {
   width: 100%;
   position: relative;
   cursor: text;
-  border-radius: 3px;
+  border-radius: $radius-8;
   display: inline-flex;
   &--disabled {
     cursor: not-allowed;
@@ -444,7 +444,7 @@ export default {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: $radius-8;
     margin: -8px -14px -8px 0;
     padding: 2px;
     & > * {
