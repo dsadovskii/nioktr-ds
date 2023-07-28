@@ -361,7 +361,7 @@ export default {
   &__content {
     position: relative;
     border: 1px solid $color-gray;
-    border-radius: 3px;
+    border-radius: $radius-8;
     background-color: $bg-lighter-blue;
     &--no-bg {
       background: transparent;
@@ -544,7 +544,7 @@ export default {
       top: 2px;
       right: 2px;
       height: calc(100% - 4px);
-      border-radius: 3px;
+      border-radius: $radius-8;
       &:hover {
         filter: brightness(1.3);
       }
@@ -579,7 +579,7 @@ export default {
       top: 2px;
       right: 2px;
       height: calc(100% - 4px);
-      border-radius: 3px;
+      border-radius: $radius-8;
       &:hover {
         filter: brightness(1.3);
       }
@@ -605,7 +605,7 @@ export default {
     align-items: center;
     justify-content: center;
     height: calc(100% - 6px);
-    border-radius: 3px;
+    border-radius: $radius-8;
     pointer-events: none;
   }
 

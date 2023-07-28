@@ -23,6 +23,26 @@ export default {
       type: Boolean,
       default: false,
     },
+    noBorderRadius: {
+      type: Boolean,
+      default: false,
+    },
+    noBorderTopLeftRadius: {
+      type: Boolean,
+      default: false,
+    },
+    noBorderTopRightRadius: {
+      type: Boolean,
+      default: false,
+    },
+    noBorderBottomRightRadius: {
+      type: Boolean,
+      default: false,
+    },
+    noBorderBottomLeftRadius: {
+      type: Boolean,
+      default: false,
+    },
     noBg: {
       type: Boolean,
       default: false,
@@ -38,41 +58,46 @@ export default {
   render(h, { slots, props, data, listeners }) {
     const attrs = props.to ? { to: props.to } : {}
     return h(
-      props.to ? (props.nuxt ? 'nuxt-link' : 'router-link') : 'article',
-      {
-        class: {
-          'pt-card': true,
-          'pt-card--no-shadow': props.noShadow,
-          'pt-card--no-border': props.noBorder,
-          'pt-card--no-padding': props.noPadding,
-          'pt-card--no-bg': props.noBg,
-          [`pt-card-header--valign-${props.headerValign}`]: true,
-          [`${data.staticClass}`]: !!data.staticClass,
-          ...data.class,
-        },
-        attrs: attrs,
-        on: {
-          click(e) {
-            if (!Object.keys(listeners).length) return
-            listeners['click'](e)
+        props.to ? (props.nuxt ? 'nuxt-link' : 'router-link') : 'article',
+        {
+          class: {
+            'pt-card': true,
+            'pt-card--no-shadow': props.noShadow,
+            'pt-card--no-border': props.noBorder,
+            'pt-card--no-border-radius': props.noBorderRadius,
+            'pt-card--no-border-top-left-radius': props.noBorderTopLeftRadius,
+            'pt-card--no-border-top-right-radius': props.noBorderTopRightRadius,
+            'pt-card--no-border-bottom-right-radius': props.noBorderBottomRightRadius,
+            'pt-card--no-border-bottom-left-radius': props.noBorderBottomLeftRadius,
+            'pt-card--no-padding': props.noPadding,
+            'pt-card--no-bg': props.noBg,
+            [`pt-card-header--valign-${props.headerValign}`]: true,
+            [`${data.staticClass}`]: !!data.staticClass,
+            ...data.class,
+          },
+          attrs: attrs,
+          on: {
+            click(e) {
+              if (!Object.keys(listeners).length) return
+              listeners['click'](e)
+            },
           },
         },
-      },
-      [
-        !(slots()['card-header'] || slots()['card-header-left'] || slots()['card-header-right']) ||
+        [
+          !(slots()['card-header'] || slots()['card-header-left'] || slots()['card-header-right']) ||
           h('section', { class: 'pt-card__header' }, [
             !slots()['card-header-left'] || h('div', { class: 'pt-card__header-left' }, slots()['card-header-left']),
             !slots()['card-header'] || h('div', { class: 'pt-card__header-center' }, slots()['card-header']),
             !slots()['card-header-right'] || h('div', { class: 'pt-card__header-right' }, slots()['card-header-right']),
           ]),
-        !slots()['default'] || h('section', { class: 'pt-card__content' }, slots()['default']),
-        !(slots()['card-footer'] || slots()['card-footer-left'] || slots()['card-footer-right']) ||
+          !slots()['default'] || h('section', { class: 'pt-card__content' }, slots()['default']),
+          !(slots()['card-footer'] || slots()['card-footer-left'] || slots()['card-footer-right']) ||
           h('section', { class: 'pt-card__footer' }, [
             !slots()['card-footer-left'] || h('div', { class: 'pt-card__footer-left' }, slots()['card-footer-left']),
             !slots()['card-footer'] || h('div', { class: 'pt-card__footer-center' }, slots()['card-footer']),
             !slots()['card-footer-right'] || h('div', { class: 'pt-card__footer-right' }, slots()['card-footer-right']),
           ]),
-      ],
+        ],
     )
   },
 }
@@ -86,7 +111,7 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   box-shadow: $shadow-card;
-  border-radius: $radius-3;
+  border-radius: $radius-24;
   background-color: $color-white;
   transition: box-shadow 0.5s ease;
   &__header,
@@ -155,6 +180,23 @@ export default {
     &-border {
       #{$block-name}__header {
         border-bottom: none;
+      }
+    }
+    &-border-radius {
+      border-radius: 0;
+    }
+    &-border {
+      &-top-left-radius {
+        border-top-left-radius: 0;
+      }
+      &-top-right-radius {
+        border-top-right-radius: 0;
+      }
+      &-bottom-right-radius {
+        border-bottom-right-radius: 0;
+      }
+      &-bottom-left-radius {
+        border-bottom-left-radius: 0;
       }
     }
     &-padding {

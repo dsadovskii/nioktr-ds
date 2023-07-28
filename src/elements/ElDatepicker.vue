@@ -225,7 +225,7 @@ export default {
         outline: none;
         color: $color-black;
         height: 52px;
-        border-radius: 3px;
+        border-radius: $radius-8;
         &::placeholder {
           color: $color-gray;
           font-size: $fs-16;
@@ -265,7 +265,7 @@ export default {
         color: $color-white;
         background: $color-light-blue;
         pointer-events: none;
-        border-radius: 3px;
+        border-radius: $radius-8;
       }
     }
   }
@@ -283,7 +283,7 @@ export default {
         outline: none;
         color: $color-black;
         height: 40px;
-        border-radius: 3px;
+        border-radius: $radius-8;
         &::placeholder {
           color: $color-gray;
           font-size: $fs-14;
@@ -322,7 +322,7 @@ export default {
         max-height: 35px;
         right: 3px;
         color: $color-gray;
-        border-radius: 3px;
+        border-radius: $radius-8;
         cursor: pointer;
         &:hover {
           filter: brightness(1.3);
@@ -347,7 +347,7 @@ export default {
         outline: none;
         color: $color-black;
         height: 34px;
-        border-radius: 3px;
+        border-radius: $radius-8;
         &::placeholder {
           color: $color-gray;
           font-size: $fs-14;
@@ -387,7 +387,7 @@ export default {
         right: 3px;
         color: $color-white;
         background: $color-light-blue;
-        border-radius: 3px;
+        border-radius: $radius-8;
         cursor: pointer;
         &:hover {
           filter: brightness(1.3);

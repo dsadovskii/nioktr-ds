@@ -147,7 +147,7 @@ export default {
   cursor: pointer;
   outline: 0;
   border: 1px solid transparent;
-  border-radius: 3px;
+  border-radius: $radius-8;
   transition: all 0.3s;
   color: $color-black;
   -webkit-appearance: none;
