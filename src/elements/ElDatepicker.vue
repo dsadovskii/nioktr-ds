@@ -2,25 +2,25 @@
   <section class="el-datepicker" :class="computedClasses">
     <span class="el-datepicker__title" :class="{ required: required && !!title }">{{ title }}</span>
     <date-picker
-      :id="name"
-      :ref="name"
-      v-model="date"
-      :valueType="valueType"
-      :type="type"
-      :name="name"
-      :required="required"
-      :disabled="disabled"
-      :placeholder="placeholder"
-      :format="format"
-      :append-to-body="appendToBody"
-      :class="{ 'el-datepicker--with-title': !!this.title }"
-      :disabled-date="disabledDate"
-      @change="emit('change', $event)"
-      @open="emit('open', $event)"
-      @close="emit('close', $event)"
-      @clear="emit('clear', $event)"
-      @pick="emit('pick', $event)"
-      @focus="emit('focus', $event)"
+        :id="name"
+        :ref="name"
+        v-model="date"
+        :valueType="valueType"
+        :type="type"
+        :name="name"
+        :required="required"
+        :disabled="disabled"
+        :placeholder="placeholder"
+        :format="format"
+        :append-to-body="appendToBody"
+        :class="{ 'el-datepicker--with-title': !!this.title }"
+        :disabled-date="disabledDate"
+        @change="emit('change', $event)"
+        @open="emit('open', $event)"
+        @close="emit('close', $event)"
+        @clear="emit('clear', $event)"
+        @pick="emit('pick', $event)"
+        @focus="emit('focus', $event)"
     />
     <small class="el-datepicker--error-msg">{{ errorMessage }}</small>
     <small v-if="hint && !errorMessage" class="el-datepicker--hint-msg">{{ hint }}</small>
@@ -149,25 +149,25 @@ export default {
     date: {
       get() {
         return this.useTimezone
-          ? momentTz.tz(moment(this.value, 'YYYY-MM-DD HH:mm:SS')._i, this.currentTimezone).format(this.format)
-          : this.value
-          ? moment(this.value, this.toFormat).format(this.format)
-          : this.defaultSelectToday
-          ? moment(this.value, this.toFormat).format(this.format)
-          : null
+            ? momentTz.tz(moment(this.value, 'YYYY-MM-DD HH:mm:SS')._i, this.currentTimezone).format(this.format)
+            : this.value
+                ? moment(this.value, this.toFormat).format(this.format)
+                : this.defaultSelectToday
+                    ? moment(this.value, this.toFormat).format(this.format)
+                    : null
       },
       set(value) {
         if (!value) return this.$emit('input', null)
         this.$emit(
-          'input',
-          this.useTimezone
-            ? momentTz
-                .tz(moment(value, this.format).format('YYYY-MM-DD HH:mm:SS'), this.currentTimezone)
-                .utc()
-                .format()
-            : this.toFormat
-            ? moment(value, this.format).format(this.toFormat)
-            : moment(value, this.format).format(),
+            'input',
+            this.useTimezone
+                ? momentTz
+                    .tz(moment(value, this.format).format('YYYY-MM-DD HH:mm:SS'), this.currentTimezone)
+                    .utc()
+                    .format()
+                : this.toFormat
+                    ? moment(value, this.format).format(this.toFormat)
+                    : moment(value, this.format).format(),
         )
       },
     },
@@ -215,6 +215,7 @@ export default {
   &--size-m {
     .mx-datepicker {
       width: 100%;
+      border-radius: 8px;
       .mx-input {
         padding: $space-14 $space-24;
         font-size: $fs-16;
@@ -273,6 +274,7 @@ export default {
     .mx-datepicker {
       width: 100%;
       background-color: $bg-lighter-blue;
+      border-radius: 8px;
       .mx-input {
         padding: $space-8 $space-14;
         font-size: $fs-14;
@@ -337,6 +339,7 @@ export default {
     .mx-datepicker {
       width: 100%;
       background-color: $bg-lighter-blue;
+      border-radius: 8px;
       .mx-input {
         padding: $space-8 $space-14;
         font-size: $fs-14;
