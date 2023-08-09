@@ -1,6 +1,6 @@
 <template>
   <section class="pt-tabs">
-    <a-tabs v-model="currentTab" :default-active-key="defaultActiveKey" :animated="animated">
+    <a-tabs v-model="currentTab" :default-active-key="defaultActiveKey" :tab-bar-gutter="0" :animated="animated">
       <slot />
       <slot name="tabBarExtraContent" slot="tabBarExtraContent" />
     </a-tabs>
