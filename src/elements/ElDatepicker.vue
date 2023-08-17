@@ -240,6 +240,7 @@ export default {
       &-main {
         width: 100%;
         max-width: 300px;
+        border-radius: $radius-8;
         .mx-calendar {
           width: 100%;
           &-content {
@@ -252,6 +253,9 @@ export default {
                   line-height: $lh-2;
                 }
               }
+            }
+            .active {
+              border-radius: $radius-8;
             }
           }
         }
@@ -299,6 +303,7 @@ export default {
       &-main {
         width: 100%;
         max-width: 300px;
+        border-radius: $radius-8;
         .mx-calendar {
           width: 100%;
           &-content {
@@ -311,6 +316,9 @@ export default {
                   line-height: $lh-2;
                 }
               }
+            }
+            .active {
+              border-radius: $radius-8;
             }
           }
         }
@@ -364,6 +372,7 @@ export default {
       &-main {
         width: 100%;
         max-width: 300px;
+        border-radius: $radius-8;
         .mx-calendar {
           width: 100%;
           &-content {
@@ -376,6 +385,9 @@ export default {
                   line-height: $lh-2;
                 }
               }
+            }
+            .active {
+              border-radius: $radius-8;
             }
           }
         }
