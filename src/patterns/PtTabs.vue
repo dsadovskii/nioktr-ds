@@ -76,6 +76,7 @@ export default {
     }
     &-top-bar {
       border-color: $color-gray-3;
+      border-radius: 24px 24px 0 0;
     }
   }
 }
